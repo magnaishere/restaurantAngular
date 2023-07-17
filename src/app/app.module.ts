@@ -5,14 +5,26 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './pages/home/home.component'
-
+import {MatCardModule} from '@angular/material/card';
+import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
+import {MatInputModule} from '@angular/material/input';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 import { environment } from 'src/environments/environment';
 import { HttpClientModule } from '@angular/common/http';
+import { MainComponent } from './pages/main/main.component';
+import { MenuComponent } from './pages/menu/menu.component';
+import { DetailProductComponent } from './pages/detail-product/detail-product.component';
+import { OrderComponent } from './pages/order/order.component';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
+    MainComponent,
+    MenuComponent,
+    DetailProductComponent,
+    OrderComponent,
   ],
   imports: [
     BrowserModule,
@@ -21,6 +33,11 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    MatCardModule,
+    MatButtonModule,
+    MatIconModule,
+    MatInputModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent],

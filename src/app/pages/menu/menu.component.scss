@@ -1,0 +1,243 @@
+.container {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+.contend {
+  width: 100%;
+  padding: 20px 300px 20px 300px;
+}
+
+@media (max-width: 1320px) {
+  .contend {
+    width: 100%;
+    padding: 10px 3px 10px 3px;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.back {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--main-bg-color);
+}
+
+.searchBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0px 20px 0px;
+}
+
+.search {
+  width: 60%;
+  background-color: var(--main-bg-color);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3px 6px 3px 6px;
+}
+
+@media (max-width: 468px) { 
+  .searchBox {
+    margin-left: 10px;   
+  } 
+  .search {
+    width: 100%;   
+  }
+}
+
+.search input{
+      outline: none;
+      background-color: var(--main-bg-color);
+      border: none;
+      width: 100%;
+}
+
+.search span{
+  cursor: pointer;
+}
+
+.containerCardCombo{
+  display: flex;
+  width: auto;
+  height: auto;
+  overflow-x: scroll;
+  margin-bottom: 2em;
+}
+
+.containerCardCombo::-webkit-scrollbar {
+  display: none;  /* Ocultar scroll */
+}
+
+.cardCombo{
+  position: relative;
+  width: 220px;
+  height: 350px;
+  background-color: var(--main-bg-color);
+  border-radius: 10px;
+  padding: 10px;
+  margin-right: 10px;
+}
+
+.chip{
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 20px;
+  width: auto;
+  height: auto; 
+}
+
+.containerImg{
+  cursor: pointer;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+}
+
+.hidden-input {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+}
+
+.containerImg img{
+  object-fit: cover;
+  width:100%;
+  height:100%;
+  border-radius: 10px;
+}
+
+
+.wave {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg,#ada996, #f2f2f2, #dbdbdb, #eaeaea);
+  background-size: 200% 200%;
+  animation: cambiar 1s ease-in-out 4;
+  opacity: 0.5;
+  z-index: 1;  
+  border-radius: 10px;
+}
+
+@keyframes cambiar {
+  0%{background-position: 0 50%; opacity: 0.3;}
+  50%{background-position: 100% 50%;opacity: 0;}
+  100%{background-position: 0 50%; opacity: 0.3;}
+}
+
+.containerInfoCombo{
+  box-sizing: border-box;
+}
+.titleCombo{
+  padding: 10px 0px 0px 0px;
+  font-size: larger;
+}
+
+.price{
+  padding: 10px 0px 10px 0px;
+  text-align: right;
+  font-size: 16px;
+}
+
+.containerChips{
+  display: flex;
+  width: auto;
+  height: 40px;
+  overflow-x: scroll;
+  margin-bottom: 20px;
+}
+
+.containerChips::-webkit-scrollbar {
+  display: none;  /* Ocultar scroll */
+}
+.myChipMadeByMe{
+  cursor: pointer;
+  width: min-content;
+  height: auto;
+  padding: 10px 20px 10px 20px;
+  background-color: var(--main-bg-color);
+  border-radius: 20px;
+  margin-right: 10px;
+}
+
+.containerCardProduct{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardProduct{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 220px;
+  background-color: var(--main-bg-color);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.containerImgProduct{
+  width: 50%;
+  height: 200px;
+  border-radius: 10px;
+}
+
+.containerImgProduct img{
+  object-fit: cover;
+  width:100%;
+  height:100%;
+  border-radius: 10px;
+}
+.containerInfoProduct{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.priceProduct{
+  text-align: right;
+}
+
+.gridResponsive{  
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: max-content;
+  grid-auto-flow: dense; 
+  gap: 10px; 
+}
+
+@media (max-width: 468px) {
+  .gridResponsive{    
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: max-content;
+    gap: 5px; 
+  }
+}
+
+

@@ -1,0 +1,82 @@
+<div class="container">
+    <div class="contend">
+
+        <!-- HEADER -->
+        <div class="header">
+            <div class="back" (click)="back()">
+                <mat-icon matSuffix><span class="material-symbols-outlined">
+                        arrow_back
+                    </span>
+                </mat-icon>
+                <div>Home</div>
+            </div>
+            <div class="avatar">
+                <img src="" alt="">
+            </div>
+        </div>
+
+        <!-- BARRA DE BUSQUEDA -->
+        <div class="searchBox">
+            <div class="search">
+                <input type="search" placeholder="Buscar Producto">
+                <mat-icon matSuffix><span class="material-symbols-outlined">
+                    search
+                </span>
+            </mat-icon>
+            </div>
+            
+        </div>
+
+        <!-- PROMOCIONES -->
+        <div class="containerCardCombo">       
+            
+            <div class="cardCombo" *ngFor="let promo of promos">
+                <div class="chip">
+                    <i>PROMO</i>
+                </div>
+                <div class="containerImg" (click)="openFileInput()">
+                    <div class="hidden-input">
+                        <input type="file" (change)="onFileSelected($event)" #fileInput>
+                      </div>
+                    <img src={{promo.imgUrlPromo}} alt="imgCombo">                   
+                </div>
+                <div class="containerInfoCombo">
+                    <div class="titleCombo">
+                        {{promo.tittlePromo}}
+                    </div>
+                    <div class="price">
+                        {{promo.pricePromo}}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tittles">
+            <h2>Categorías</h2>
+        </div>
+
+        <div class="containerChips">
+            <div class="myChipMadeByMe" *ngFor="let categoria of categorias">
+                {{categoria.name}}
+            </div>
+        </div>
+
+        <div class="gridResponsive">
+            <div class="containerCardProduct" *ngFor="let product of products">
+                <div class="cardProduct">
+                    <div class="containerImgProduct">
+                        <img src={{product.imgUrlProduct}} alt="imgProduct">
+                    </div>
+                    <div class="containerInfoProduct">
+                        <div class="titleProduct">
+                            {{product.tittleProduct}}
+                        </div>
+                        <div class="priceProduct">
+                            {{product.priceProduct}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
