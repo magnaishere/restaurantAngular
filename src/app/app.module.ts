@@ -10,6 +10,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
 import {MatGridListModule} from '@angular/material/grid-list';
+import { MatDialogModule } from '@angular/material/dialog';
 
 import { environment } from 'src/environments/environment';
 import { HttpClientModule } from '@angular/common/http';
@@ -17,6 +18,9 @@ import { MainComponent } from './pages/main/main.component';
 import { MenuComponent } from './pages/menu/menu.component';
 import { DetailProductComponent } from './pages/detail-product/detail-product.component';
 import { OrderComponent } from './pages/order/order.component';
+
+// Dialogs
+import { AlertContent } from './components/alert-dialog-content/alert-dialog-content';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,6 +28,7 @@ import { OrderComponent } from './pages/order/order.component';
     MainComponent,
     MenuComponent,
     DetailProductComponent,
+    AlertContent,
     OrderComponent,
   ],
   imports: [
@@ -37,7 +42,8 @@ import { OrderComponent } from './pages/order/order.component';
     MatButtonModule,
     MatIconModule,
     MatInputModule,
-    MatGridListModule
+    MatGridListModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent],

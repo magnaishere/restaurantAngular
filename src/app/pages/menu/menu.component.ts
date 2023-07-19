@@ -1,17 +1,6 @@
 import { Component, OnInit, ViewChild  } from '@angular/core';
 import { Location } from '@angular/common';
-import { SesionService } from 'src/app/services/sesion.service';
-
-export interface Categorias {
-  name: string;
-}
-
-
-export interface Products {
-  imgUrlProduct: string;
-  tittleProduct: string;
-  priceProduct: number
-}
+import { SessionService } from 'src/app/services/session.service';
 
 @Component({
   selector: 'app-menu',
@@ -23,7 +12,7 @@ export class MenuComponent implements OnInit {
   mybreakpoint: number;
   constructor(
     private location: Location,
-    private sesionService: SesionService
+    private sesionService: SessionService
   ) {
 
   }
@@ -42,7 +31,7 @@ export class MenuComponent implements OnInit {
     this.location.back()
   }
 
-  categorias: Categorias[] = [
+  categorias: any[] = [
     { name: 'hamburguesas' },
     { name: 'bebidas' },
     { name: 'postres' },
@@ -90,7 +79,7 @@ export class MenuComponent implements OnInit {
     }    
   ];
 
-  products: Products[] = [
+  products: any[] = [
     {
       imgUrlProduct: '../../../assets/menu.jpg',
       tittleProduct: 'La hamburguesa vegana que te hara sentir mejor persona',

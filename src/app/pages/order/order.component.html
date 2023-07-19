@@ -4,7 +4,8 @@
         <!-- HEADER -->
         <div class="header">
             <div class="back">
-                <mat-icon matSuffix><span class="material-symbols-outlined">
+                <mat-icon matSuffix>
+                    <span class="material-symbols-outlined">
                         arrow_back
                     </span>
                 </mat-icon>
@@ -19,29 +20,28 @@
             <div class="item" *ngFor="let item of items">
                 <div class="containerImgItem">
                     <img src="{{item.imgItem}}" alt="">
-                </div>            
-            
-            <div class="infoItem">
-                <div class="tittleItem">
-                    {{item.tittleItem}}
                 </div>
-                <div class="descItem">
-                    {{item.priceItem}}
+                <div class="infoItem">
+                    <div class="tittleItem">
+                        {{item.tittleItem}}
+                    </div>
+                    <div class="descItem">
+                        {{item.priceItem}}
+                    </div>
                 </div>
-            </div>
-            <div class="controlItem">
-                <div class="cItem">
-                    {{item.numItem}}
-                </div>
-                <div class="cItem">
-                    <mat-icon matSuffix><span class="material-symbols-outlined">
-                        delete
-                    </span>
-                </mat-icon>
+                <div class="controlItem">
+                    <div class="cItem">
+                        {{item.numItem}}
+                    </div>
+                    <div class="cItem">
+                        <mat-icon matSuffix><span class="material-symbols-outlined">
+                                delete
+                            </span>
+                        </mat-icon>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
     </div>
 </div>
