@@ -1,0 +1,59 @@
+.containerLogin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.boxLogin {
+  width: 300px;
+  height: 300px;
+  border: 1px solid var(--main-bg-color);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 600px) {
+    .boxLogin {
+      width: 100%;
+      height: 100vh;
+      padding: 10px;
+      position: relative;
+      border: none;
+    }
+  }
+
+.myInput {
+  width: 90%;
+  background-color: var(--main-bg-color);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3px 6px 3px 6px;
+  margin-bottom: 5px;
+}
+
+@media (max-width: 468px) {
+  .myInputBox {
+    margin-left: 10px;
+  }
+  .myInput {
+    width: 100%;
+  }
+}
+
+.myInput input {
+  outline: none;
+  background-color: var(--main-bg-color);
+  border: none;
+  width: 100%;
+}
+
+.myInput input::placeholder {
+  font-size: 10px;
+}

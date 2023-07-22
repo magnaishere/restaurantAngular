@@ -1,0 +1,22 @@
+<div class="containerBox">
+  <div class="box">
+    <h5>Sign in</h5>
+    <div class="myInput">
+      <input type="text" placeholder="Nombre de usuario">
+    </div>
+    <div class="inputsClassNumber">
+        <select name="countries" class="inputClassCode" [(ngModel)]="country" *ngIf="countries">
+            <option *ngFor="let country of countries;" [value]="'+'+country.phonecode">{{country.isoCode+'  +'+country.phonecode}}</option>
+        </select>
+        <input type="number" class="inputClassPhone" [(ngModel)]="phone" placeholder="Teléfono">
+    </div>
+    <div class="myInput">
+      <input type="password" placeholder="Contrasseña">
+    </div>
+    <div class="myInput">
+      <input type="password" placeholder="Repetir contraseña">
+    </div>
+    <br>
+    <button mat-raised-button>Continuar</button>
+  </div>
+</div>

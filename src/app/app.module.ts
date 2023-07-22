@@ -19,6 +19,9 @@ import { MenuComponent } from './pages/menu/menu.component';
 import { DetailProductComponent } from './pages/detail-product/detail-product.component';
 import { OrderComponent } from './pages/order/order.component';
 
+import { LoginComponent } from './pages/login/login.component';
+import { RegisterComponent } from './pages/register/register.component';
+
 // Dialogs
 import { AlertContent } from './components/alert-dialog-content/alert-dialog-content';
 @NgModule({
@@ -29,6 +32,8 @@ import { AlertContent } from './components/alert-dialog-content/alert-dialog-con
     MenuComponent,
     DetailProductComponent,
     AlertContent,
+    LoginComponent,
+    RegisterComponent,
     OrderComponent,
   ],
   imports: [

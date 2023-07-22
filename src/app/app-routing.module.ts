@@ -5,6 +5,10 @@ import { MainComponent } from './pages/main/main.component';
 import { MenuComponent } from './pages/menu/menu.component';
 import { DetailProductComponent } from './pages/detail-product/detail-product.component';
 import { OrderComponent } from './pages/order/order.component';
+import { LoginComponent } from './pages/login/login.component';
+import { RegisterComponent } from './pages/register/register.component';
+
+
 const routes: Routes = [
   {
     path: '',
@@ -26,6 +30,14 @@ const routes: Routes = [
   {
     path: 'order',
     component: OrderComponent,
+  },
+  {
+    path: 'login',
+    component: LoginComponent,
+  },
+  {
+    path: 'register',
+    component: RegisterComponent,
   },
 ];
 
